@@ -1,0 +1,13 @@
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 4.5;
+  background-color: rgb(226, 247, 245);
+  padding: 14px 28px;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow:4px 6px 8px 7px rgb(114, 112, 112);
+}
