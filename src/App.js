@@ -35,8 +35,9 @@ function App() {
     <div className="App">
       <React.Fragment>
         <Navbar />
-        <Slider/>
+        {/* <Slider/> */}
         <Routes>
+        <Route path='/slider' element={<Slider />}/>
           {!loggedInUser ? (
             <>
               <Route path="/signup" element={<SignUpForm />} />

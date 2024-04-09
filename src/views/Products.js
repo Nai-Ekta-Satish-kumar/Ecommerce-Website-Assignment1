@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProductItems from "./ProductItems";
 import axios from "axios"
+import Slider from "./Slider";
 const Products = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -81,8 +82,8 @@ const Products = () => {
   const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
   return (
     <div className="container my-3">
-      <h2>Fancy Collections</h2>
-      <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
+      <Slider/>
+      <div style={{ display: "flex", gap: "10px", marginBottom: "20px", marginTop:"20px" }}>
         <input
           type="text"
           value={searchQuery}
