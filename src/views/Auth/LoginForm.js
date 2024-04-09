@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import "./style.scss";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { loginSuccess, loginFailure } from "../../redux/AuthSlice";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -21,7 +21,6 @@ const LoginForm = () => {
   } = useForm();
   const dispatch = useDispatch();
   const [loginError, setLoginError] = useState("");
-  const loggedInUser = useSelector((state) => state.auth.loggedInUser);
   const onSubmit = (data) => {
     const { email, password } = data;
     const users = JSON.parse(localStorage.getItem("users")) || [];
