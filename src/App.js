@@ -35,7 +35,6 @@ function App() {
     <div className="App">
       <React.Fragment>
         <Navbar />
-        {/* <Slider/> */}
         <Routes>
         <Route path='/slider' element={<Slider />}/>
           {!loggedInUser ? (

@@ -27,8 +27,6 @@ const Products = () => {
     };
     fetchProducts();
   }, []);
-
-
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     setCartItems(storedCartItems);
@@ -48,8 +46,6 @@ const Products = () => {
       localStorage.setItem("cartItems", JSON.stringify([...cartItems, {...product, quantity: 1}]));
     }
   };
-
-
   const handlePrevPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
   };
@@ -101,8 +97,6 @@ const Products = () => {
           {sortAscending ? "Sort Descending" : "Sort Ascending"}
         </button>
       </div>
-      
-
       <div className="row">
         {currentItems.map((element) => (
           <div className="col-m-4 mt-4" key={element.id}>
